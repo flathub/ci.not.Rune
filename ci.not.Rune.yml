@@ -46,8 +46,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/Losses/rune/releases/download/v1.0.0-rc.2/Rune-v1.0.0-rc.2-linux-amd64.zip
-        sha256: 279b84503e65f72cfc4c278b4164648a759b5f84de7788d13632b0f91db83a84
+        url: https://github.com/Losses/rune/releases/download/v1.1.0-alpha.4/Rune-v1.1.0-alpha.4-linux-amd64.zip
+        sha256: ab048b28428313b47163a7e101aeec6c4f3dc8b055d09cf04b687f2ac9693ddb
         strip-components: 0
         x-checker-data:
           type: json
