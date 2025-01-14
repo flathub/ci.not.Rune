@@ -23,10 +23,14 @@ modules:
     build-commands:
       - install -Dm644 assets/rune.desktop -t /app/share/applications/
       - install -Dm644 assets/rune.metainfo.xml -t /app/share/metainfo/
-      - rm -fr assets/icons/1024x1024
       - mkdir -p /app/share/icons
+      - rm -fr assets/icons/1024x1024
       - cp -r assets/icons /app/share/icons/hicolor
       - rm -fr assets
+      - mkdir -p /app/share/icons/hicolor/scalable
+      - install -Dm644 data/flutter_assets/assets/linux-tray-dark.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-dark.svg
+      - install -Dm644 data/flutter_assets/assets/linux-tray-light.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-light.svg
+      - rm -fr data/flutter_assets/assets/mac-tray.svg data/flutter_assets/assets/linux-tray-{dark,light}.svg data/flutter_assets/assets/tray_icon_{dark,light}.ico
       - cp -r . /app/share/rune
       - chmod +x /app/share/rune/rune
       - ln -s /app/share/rune/rune /app/bin/rune
