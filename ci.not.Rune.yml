@@ -30,7 +30,8 @@ modules:
       - mkdir -p /app/share/icons/hicolor/scalable
       - install -Dm644 data/flutter_assets/assets/linux-tray-dark.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-dark.svg
       - install -Dm644 data/flutter_assets/assets/linux-tray-light.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-light.svg
-      - rm -fr data/flutter_assets/assets/mac-tray.svg data/flutter_assets/assets/linux-tray-{dark,light}.svg data/flutter_assets/assets/tray_icon_{dark,light}.ico
+      - rm -fr data/flutter_assets/assets/mac-tray.svg data/flutter_assets/assets/linux-tray-{dark,light}.svg
+        data/flutter_assets/assets/tray_icon_{dark,light}.ico
       - cp -r . /app/share/rune
       - chmod +x /app/share/rune/rune
       - ln -s /app/share/rune/rune /app/bin/rune
@@ -38,8 +39,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/Losses/rune/releases/download/v1.1.0/Rune-v1.1.0-linux-aarch64.zip
-        sha256: 4212916f31e9d49946741bef8ea9a34f6f39e68ed6675d13e746c594cea2a623
+        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.4/Rune-v2.0.0-alpha.4-linux-aarch64.zip
+        sha256: 1613e3da49a63c47e512e529f1a13018ce6b806330bdcccc12ec331985c2e270
         strip-components: 0
         x-checker-data:
           type: json
@@ -50,8 +51,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/Losses/rune/releases/download/v1.1.0/Rune-v1.1.0-linux-amd64.zip
-        sha256: a53da2ae4134188ea9d5be8865d063dda9360ac83d6e33dec73e24add4417d09
+        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.4/Rune-v2.0.0-alpha.4-linux-amd64.zip
+        sha256: 9b335b4fe4683a2ec44bd19d5049fc7e6c1a931d829000f4c7480ec161a980bf
         strip-components: 0
         x-checker-data:
           type: json
