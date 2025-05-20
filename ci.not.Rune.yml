@@ -43,8 +43,8 @@ modules:
         strip-components: 0
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/Losses/rune/releases/latest
-          version-query: .tag_name
+          url: https://api.github.com/repos/Losses/rune/tags
+          version-query: .[0].name
           url-query: '"https://github.com/Losses/rune/releases/download/" + $version
             + "/Rune-" + $version + "-linux-aarch64.zip"'
       - type: archive
@@ -55,7 +55,7 @@ modules:
         strip-components: 0
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/Losses/rune/releases/latest
-          version-query: .tag_name
+          url: https://api.github.com/repos/Losses/rune/tags
+          version-query: .[0].name
           url-query: '"https://github.com/Losses/rune/releases/download/" + $version
             + "/Rune-" + $version + "-linux-amd64.zip"'
