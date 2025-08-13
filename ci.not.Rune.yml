@@ -39,8 +39,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.4/Rune-v2.0.0-alpha.4-linux-aarch64.zip
-        sha256: 1613e3da49a63c47e512e529f1a13018ce6b806330bdcccc12ec331985c2e270
+        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.5/Rune-v2.0.0-alpha.5-linux-aarch64.zip
+        sha256: 6b982c50abe879fb11e723823caa9c37b765bb84d63e14c949c6940560afc439
         strip-components: 0
         x-checker-data:
           type: json
@@ -51,8 +51,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.4/Rune-v2.0.0-alpha.4-linux-amd64.zip
-        sha256: 9b335b4fe4683a2ec44bd19d5049fc7e6c1a931d829000f4c7480ec161a980bf
+        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.5/Rune-v2.0.0-alpha.5-linux-amd64.zip
+        sha256: ac0e5b1dfa30b6c3620036091f0c607cdfd23b837b10a0f63b4bf53278d6fc10
         strip-components: 0
         x-checker-data:
           type: json
