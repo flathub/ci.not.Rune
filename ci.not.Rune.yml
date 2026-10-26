@@ -42,9 +42,14 @@ modules:
         sha256: 3b8a59aa52b4f11da39edd9d0c8d29e9ba118ab551acf917f4a1cbc5402b0570
         strip-components: 0
         x-checker-data:
+        #  type: json
+        #  url: https://api.github.com/repos/Losses/rune/releases/latest
+        #  version-query: .tag_name
+        #  url-query: '"https://github.com/Losses/rune/releases/download/" + $version
+        #    + "/Rune-" + $version + "-linux-aarch64.zip"'
           type: json
-          url: https://api.github.com/repos/Losses/rune/releases/latest
-          version-query: .tag_name
+          url: https://api.github.com/repos/Losses/rune/tags
+          version-query: .[0].name
           url-query: '"https://github.com/Losses/rune/releases/download/" + $version
             + "/Rune-" + $version + "-linux-aarch64.zip"'
       - type: archive
@@ -54,8 +59,13 @@ modules:
         sha256: b35d7a617b75daa0b99a97e2c6999071d9302463165f49d7ed777949a09e0bc6
         strip-components: 0
         x-checker-data:
+        #  type: json
+        #  url: https://api.github.com/repos/Losses/rune/releases/latest
+        #  version-query: .tag_name
+        #  url-query: '"https://github.com/Losses/rune/releases/download/" + $version
+        #    + "/Rune-" + $version + "-linux-amd64.zip"'
           type: json
-          url: https://api.github.com/repos/Losses/rune/releases/latest
-          version-query: .tag_name
+          url: https://api.github.com/repos/Losses/rune/tags
+          version-query: .[0].name
           url-query: '"https://github.com/Losses/rune/releases/download/" + $version
             + "/Rune-" + $version + "-linux-amd64.zip"'
