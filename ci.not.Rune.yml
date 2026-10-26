@@ -28,9 +28,13 @@ modules:
       - cp -r assets/icons /app/share/icons/hicolor
       - rm -fr assets
       - mkdir -p /app/share/icons/hicolor/scalable
-      - install -Dm644 data/flutter_assets/assets/linux-tray-dark.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-dark.svg
-      - install -Dm644 data/flutter_assets/assets/linux-tray-light.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-light.svg
-      - rm -fr data/flutter_assets/assets/mac-tray.svg data/flutter_assets/assets/linux-tray-{dark,light}.svg data/flutter_assets/assets/tray_icon_{dark,light}.ico
+      - install -Dm644 data/flutter_assets/assets/linux-tray-dark.svg 
+        /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-dark.svg
+      - install -Dm644 data/flutter_assets/assets/linux-tray-light.svg 
+        /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID-tray-light.svg
+      - rm -fr data/flutter_assets/assets/mac-tray.svg 
+        data/flutter_assets/assets/linux-tray-{dark,light}.svg 
+        data/flutter_assets/assets/tray_icon_{dark,light}.ico
       - cp -r . /app/share/rune
       - chmod +x /app/share/rune/rune
       - ln -s /app/share/rune/rune /app/bin/rune
@@ -38,8 +42,9 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.13/Rune-v2.0.0-alpha.13-linux-aarch64.zip
-        sha256: 3b8a59aa52b4f11da39edd9d0c8d29e9ba118ab551acf917f4a1cbc5402b0570
+        url: 
+          https://github.com/Losses/rune/releases/download/v2.0.0-alpha.14/Rune-v2.0.0-alpha.14-linux-aarch64.zip
+        sha256: 0f8ef646fe078c758cad86aecd40bbcbb5ac8672f1a5bcbe704a28a724d204b8
         strip-components: 0
         x-checker-data:
         #  type: json
@@ -55,8 +60,9 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        url: https://github.com/Losses/rune/releases/download/v2.0.0-alpha.13/Rune-v2.0.0-alpha.13-linux-amd64.zip
-        sha256: b35d7a617b75daa0b99a97e2c6999071d9302463165f49d7ed777949a09e0bc6
+        url: 
+          https://github.com/Losses/rune/releases/download/v2.0.0-alpha.14/Rune-v2.0.0-alpha.14-linux-amd64.zip
+        sha256: f52fc9916a7a6bed73918bb837493c817e0ace92f3b6fc856b74acdc085b5daf
         strip-components: 0
         x-checker-data:
         #  type: json
